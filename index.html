@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covenant Systems</title>
+    <link rel="icon" href="CS_icon.png" type="image/jpeg">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #00004d;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        h1, h2 {
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        h1 {
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        p, ul {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-left: 1em;
+        }
+        ul li::before {
+            content: "• ";
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        #contact a {
+            color: white;
+        }
+        .language-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .language-dropdown .dropdown-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .language-dropdown .dropdown-btn img {
+            height: 20px;
+            margin-right: 5px;
+        }
+        .language-dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333385;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0;
+        }
+        .language-dropdown .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .language-dropdown .dropdown-content a:hover {
+            background-color: #5555aa;
+        }
+        .language-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="CS_logo.png" alt="Covenant Systems Logo">
+            </div>
+            <div class="language-dropdown">
+                <button class="dropdown-btn">
+                    <img src="language.png" alt="International icon">
+                    International •&nbsp;<span id="current-lang">EN</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setLanguage('en')">🇺🇸 English</a>
+                    <a href="#" onclick="setLanguage('de')">🇩🇪 German</a>
+                    <a href="#" onclick="setLanguage('fr')">🇫🇷 French</a>
+                    <a href="#" onclick="setLanguage('es')">🇪🇸 Spanish</a>
+                    <a href="#" onclick="setLanguage('jp')">🇯🇵 Japanese</a>
+                </div>
+            </div>
+        </div>
+
+        <h1 id="main-heading">The Anchor Has Been Cut Loose.</h1>
+
+        <h2 id="sub-heading">There was one a time when your money held its value.</h2>
+
+        <p id="para1">When a unit of currency meant something fixed. Measurable. Enduring. But that era has ended. The global monetary system has entered a phase of engineered erosion— where value is no longer stored, but slowly extracted. Where monetary expansion substitutes for policy. And where capital preservation has become a moving target—unstable, distorted, and vulnerable. Money no longer holds. Trust no longer anchors. And preservation now requires structure—not hope</p>
+
+        <p id="para2"><strong>Covenant Systems</strong> was formed to answer that truth.<br>Not with. volatility. Not with speculation.<br>But with a new structure. A base layer. <em>A return to what mong was meant to be.</em></p>
+
+        <h2 id="section-heading">What We Are Designing</h2>
+
+        <p id="intro-list">Redeemable. Stable. Trustworthy. • Redemption-based valuation logic</p>
+        
+        <ul>
+            <li id="list1">Flat-inverse stability systems</li>
+            <li id="list2">Non-custodial capital preservation</li>
+            <li id="list3">Cross-border continuity infrastructure</li>
+        </ul>
+
+        <p id="para4">We are not a fund. We are not offering investment instruments. We are preparing a structure to support sovereign, institutional, and custodial trust—after the current system</p>
+
+        <p id="contact">Contact <br><a href="mailto:trust@covenantsystems.ch">trust@covenantsystems.ch</a></p>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                currentLang: "EN",
+                mainHeading: "The Anchor Has Been Cut Loose.",
+                subHeading: "There was one a time when your money held its value.",
+                para1: "When a unit of currency meant something fixed. Measurable. Enduring. But that era has ended. The global monetary system has entered a phase of engineered erosion— where value is no longer stored, but slowly extracted. Where monetary expansion substitutes for policy. And where capital preservation has become a moving target—unstable, distorted, and vulnerable. Money no longer holds. Trust no longer anchors. And preservation now requires structure—not hope",
+                para2: "<strong>Covenant Systems</strong> was formed to answer that truth.<br>Not with. volatility. Not with speculation.<br>But with a new structure. A base layer. <em>A return to what mong was meant to be.</em>",
+                sectionHeading: "What We Are Designing",
+                introList: "Redeemable. Stable. Trustworthy. • Redemption-based valuation logic",
+                list1: "Flat-inverse stability systems",
+                list2: "Non-custodial capital preservation",
+                list3: "Cross-border continuity infrastructure",
+                para4: "We are not a fund. We are not offering investment instruments. We are preparing a structure to support sovereign, institutional, and custodial trust—after the current system",
+                contact: "Contact <br><a href='mailto:trust@covenantsystems.ch'>trust@covenantsystems.ch</a>"
+            },
+            de: {
+                currentLang: "DE",
+                mainHeading: "Der Anker wurde losgeschnitten.",
+                subHeading: "Es gab einmal eine Zeit, in der Ihr Geld seinen Wert behielt.",
+                para1: "Als eine Währungseinheit etwas Festes, Messbares und Dauerhaftes bedeutete. Aber diese Ära ist zu Ende. Das globale Währungssystem ist in eine Phase der geplanten Erosion eingetreten, in der der Wert nicht mehr gespeichert, sondern langsam entzogen wird. Wo die Geldausweitung die Politik ersetzt. Und wo der Kapitalerhalt zu einem beweglichen Ziel geworden ist – instabil, verzerrt und anfällig. Geld hält nicht mehr. Vertrauen ist kein Anker mehr. Und der Werterhalt erfordert nun eine Struktur – nicht Hoffnung.",
+                para2: "<strong>Covenant Systems</strong> wurde gegründet, um auf diese Wahrheit eine Antwort zu geben.<br>Nicht mit. Volatilität. Nicht mit Spekulation.<br>Sondern mit einer neuen Struktur. Einer Basisschicht. <em>Einer Rückkehr zu dem, was Geld sein sollte.</em>",
+                sectionHeading: "Was wir entwerfen",
+                introList: "Einlösbar. Stabil. Vertrauenswürdig. • Erlösungsbasierte Bewertungslogik",
+                list1: "Flach-inverse Stabilitätssysteme",
+                list2: "Nicht-verwahrende Kapitalerhaltung",
+                list3: "Grenzüberschreitende Kontinuitätsinfrastruktur",
+                para4: "Wir sind kein Fonds. Wir bieten keine Anlageinstrumente an. Wir bereiten eine Struktur vor, um das Vertrauen von souveränen, institutionellen und treuhänderischen Stellen zu unterstützen – nach dem aktuellen System.",
+                contact: "Kontakt <br><a href='mailto:trust@covenantsystems.ch'>trust@covenantsystems.ch</a>"
+            },
+            fr: {
+                currentLang: "FR",
+                mainHeading: "L'ancre a été coupée.",
+                subHeading: "Il fut un temps où votre argent conservait sa valeur.",
+                para1: "Quand une unité de monnaie signifiait quelque chose de fixe. Mesurable. Durable. Mais cette ère est révolue. Le système monétaire mondial est entré dans une phase d'érosion planifiée, où la valeur n'est plus stockée, mais lentement extraite. Où l'expansion monétaire remplace la politique. Et où la préservation du capital est devenue une cible mouvante—instable, déformée et vulnérable. L'argent ne tient plus. La confiance n'ancre plus. Et la préservation nécessite désormais une structure—pas d'espoir.",
+                para2: "<strong>Covenant Systems</strong> a été formé pour répondre à cette vérité.<br>Pas avec la volatilité. Pas avec la spéculation.<br>Mais avec une nouvelle structure. Une couche de base. <em>Un retour à ce que l'argent était censé être.</em>",
+                sectionHeading: "Ce que nous concevons",
+                introList: "Remboursable. Stable. Digne de confiance. • Logique de valorisation basée sur le rachat",
+                list1: "Systèmes de stabilité à plat-inverse",
+                list2: "Préservation du capital non dépositaire",
+                list3: "Infrastructure de continuité transfrontalière",
+                para4: "Nous ne sommes pas un fonds. Nous n'offrons pas d'instruments d'investissement. Nous préparons une structure pour soutenir la confiance souveraine, institutionnelle et fiduciaire—après le système actuel.",
+                contact: "Contact <br><a href='mailto:trust@covenantsystems.ch'>trust@covenantsystems.ch</a>"
+            },
+            es: {
+                currentLang: "ES",
+                mainHeading: "El ancla ha sido cortada.",
+                subHeading: "Hubo una vez un tiempo en que su dinero mantenía su valor.",
+                para1: "Cuando una unidad de moneda significaba algo fijo. Medible. Duradero. Pero esa era ha terminado. El sistema monetario global ha entrado en una fase de erosión ingeniosa—donde el valor ya no se almacena, sino que se extrae lentamente. Donde la expansión monetaria sustituye a la política. Y donde la preservación del capital se ha convertido en un objetivo en movimiento—inestable, distorsionado y vulnerable. El dinero ya no se mantiene. La confianza ya no es un ancla. Y la preservación ahora requiere estructura—no esperanza.",
+                para2: "<strong>Covenant Systems</strong> se formó para responder a esa verdad.<br>No con volatilidad. No con especulación.<br>Sino con una nueva estructura. Una capa base. <em>Un retorno a lo que el dinero estaba destinado a ser.</em>",
+                sectionHeading: "Lo que estamos diseñando",
+                introList: "Redimible. Estable. Confiable. • Lógica de valoración basada en la redención",
+                list1: "Sistemas de estabilidad plana-inversa",
+                list2: "Preservación de capital sin custodia",
+                list3: "Infraestructura de continuidad transfronteriza",
+                para4: "No somos un fondo. No ofrecemos instrumentos de inversión. Estamos preparando una estructura para apoyar la confianza soberana, institucional y de custodia—después del sistema actual.",
+                contact: "Contacto <br><a href='mailto:trust@covenantsystems.ch'>trust@covenantsystems.ch</a>"
+            },
+            jp: {
+                currentLang: "JP",
+                mainHeading: "錨は切られました。",
+                subHeading: "かつて、あなたのお金には価値がありました。",
+                para1: "通貨単位が、固定的で、測定可能で、永続的な何かを意味していました。しかし、その時代は終わりました。グローバルな金融システムは、価値がもはや貯蔵されるのではなく、ゆっくりと抽出されるという、意図的な侵食の段階に入っています。金融拡大が政策の代わりとなり、資本保全が不安定で歪んだ、脆弱な動く標的となった場所です。お金はもはや保持されません。信頼はもはや錨となりません。そして、保全には希望ではなく、構造が必要です。",
+                para2: "<strong>Covenant Systems</strong> は、その真実に答えるために設立されました。<br>ボラティリティではなく。投機でもなく。<br>しかし、新しい構造で。ベースレイヤーで。<em>お金が本来あるべき姿への回帰です。</em>",
+                sectionHeading: "私たちが設計しているもの",
+                introList: "償還可能。安定的。信頼性。 • 償還ベースの評価ロジック",
+                list1: "フラットインバース安定システム",
+                list2: "非保管型資本保全",
+                list3: "国境を越えた継続性インフラストラクチャ",
+                para4: "私たちはファンドではありません。投資商品を提供しているわけではありません。私たちは、現在のシステムの後、主権、機関、およびカストディアルの信頼をサポートするための構造を準備しています。",
+                contact: "連絡先 <br><a href='mailto:trust@covenantsystems.ch'>trust@covenantsystems.ch</a>"
+            }
+        };
+
+        function setLanguage(lang) {
+            const content = translations[lang];
+            document.getElementById('current-lang').textContent = content.currentLang;
+            document.getElementById('main-heading').textContent = content.mainHeading;
+            document.getElementById('sub-heading').textContent = content.subHeading;
+            document.getElementById('para1').innerHTML = content.para1;
+            document.getElementById('para2').innerHTML = content.para2;
+            document.getElementById('section-heading').textContent = content.sectionHeading;
+            document.getElementById('intro-list').innerHTML = content.introList;
+            document.getElementById('list1').textContent = content.list1;
+            document.getElementById('list2').textContent = content.list2;
+            document.getElementById('list3').textContent = content.list3;
+            document.getElementById('para4').textContent = content.para4;
+            document.getElementById('contact').innerHTML = content.contact;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage('en');
+        });
+    </script>
+</body>
+</html>
